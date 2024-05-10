@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
 
-public class GameData : MonoBehaviour
+[CustomEditor(typeof(GameData))]
+public class GameData : Editor
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnInspectorGUI()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DrawDefaultInspector();
+        GameData gameDataScript=(GameData)target;
+        if(GUILayout.Button("Reset"))
+        {
+            gameDataScript.username="";
+            gameDataScript.playTime=0;
+            gameDataScript.money=0;
+            gameDataScript.lastPlayed=0;
+            gameDataScript.currentActiveCar=0;
+            gameDataScript.carColors=new List<Color>() {Color.white, Color.white, Color.white};
+            gameDataScript.rimMaterials=new List<Material>();
+            gameDataScript.unlockedCars=new List<bool>();
+        }
     }
 }
