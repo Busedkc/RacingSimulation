@@ -1,18 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ICarousel : MonoBehaviour
+public interface ICarousel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void ShowNextItem();
+    void ShowPreviousItem();
+    int GetCurrentItemIndex();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

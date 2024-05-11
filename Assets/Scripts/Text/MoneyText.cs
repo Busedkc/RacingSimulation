@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class MoneyText : MonoBehaviour
+public class MoneyText : FormattedText
 {
-    // Start is called before the first frame update
-    void Start()
+    public float value;
+
+    public void SetValue(float value)
     {
-        
+        this.value = value;
+        FormatText();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void FormatText()
     {
-        
+        string valueAsCurrency = value.ToString("C");
+        formattedText.SetText(valueAsCurrency);
     }
 }

@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ChooseACarController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] CarCarousel carCarousel = null;
+    [SerializeField] Button selectCarButton = null;
+    [SerializeField] TextMeshProUGUI chooseACarText = null;
+
+    private void Awake()
     {
-        
+        chooseACarText.SetText("Choose a car," + NavigationManager.SceneData["username"] + "!");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        selectCarButton.onClick.AddListener(HandleSelectCarButtonClicked);
     }
+
+    private void OnDisable()
+    {
+        selectCarButton.onClick.RemoveListener(HandleSelectCarButtonClicked);
+    }
+
+    void HandleSelectCarButtonClicked()
+    {
+        Events.CarChosen?.Invoke(carCarousel.GetCurrentItemIndex());
+        NavigationManager.LoadScene(Scenes.MAIN_MENU);
+    }
+
+
 }

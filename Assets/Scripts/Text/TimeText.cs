@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class TimeText : MonoBehaviour
+public class TimeText : FormattedText
 {
-    // Start is called before the first frame update
-    void Start()
+    private float value;
+
+    public void SetValue(float value)
     {
-        
+        this.value = value;
+        FormatText();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void FormatText()
     {
-        
+        TimeSpan time = TimeSpan.FromSeconds(value);
+        string valueAsTime = time.ToString(@"hh\:mm\:ss");
+        formattedText.SetText(prefix + " " + valueAsTime);
     }
 }

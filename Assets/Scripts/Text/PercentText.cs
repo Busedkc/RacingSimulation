@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PercentText : MonoBehaviour
+public class PercentText : FormattedText
 {
-    // Start is called before the first frame update
-    void Start()
+    private float value;
+
+    public void SetValue(float value)
     {
-        
+        this.value = value;
+        FormatText();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void FormatText()
     {
-        
+        string valueAsPercent = (value * 100).ToString("0.00") + "%";
+        formattedText.SetText(valueAsPercent);
     }
 }
+ 
+

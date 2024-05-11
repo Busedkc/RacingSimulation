@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class LapText : MonoBehaviour
+public class LapText : FormattedText
 {
-    // Start is called before the first frame update
-    void Start()
+    private int value;
+
+    public void SetValue(int value)
     {
-        
+        this.value = value;
+        FormatText();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void FormatText()
     {
-        
+        formattedText.SetText(prefix + " " + value);
     }
 }
