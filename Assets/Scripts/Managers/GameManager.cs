@@ -10,6 +10,11 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] AudioManager audioManager = null;
     public static GameData gameData;
 
+    private void Start()
+    {
+        Events.CarColorChosen += HandleCarColorSet;
+    }
+
     private void OnDestroy()
     {
         if(gameData!=null)
@@ -17,6 +22,7 @@ public class GameManager : Singleton<GameManager>
             gameData.lastPlayed=DateTime.Now.Ticks;
             SaveScriptableObject(gameData);
         }
+        Events.CarColorChosen -= HandleCarColorSet;
     }
 
     private void Update()
