@@ -8,10 +8,10 @@ public class SaveSlotsModal : Modal
 {
     public Action<bool,string> SaveSlotSelected;
 
-    [SerializeField] List<GameData> saveSlots=null;
-    [SerializeField] List<Button> saveSlotButtons=null;
-    [SerializeField] List<TextMeshProUGUI> saveSlotTexts=null;
-    [SerializeField] TwoButtonModal warningModal=null;
+    [SerializeField] List<GameData> saveSlots = null;
+    [SerializeField] List<Button> saveSlotButtons = null;
+    [SerializeField] List<TextMeshProUGUI> saveSlotTexts = null;
+    [SerializeField] TwoButtonModal warningModal = null;
 
     bool isNewGame;
     int index;
@@ -46,7 +46,7 @@ public class SaveSlotsModal : Modal
     protected override void OnDisable()
     {
         base.OnDisable();
-        for(int i=0;i<saveSlotButtons.Count;i++)
+        for(int i=0; i<saveSlotButtons.Count; i++)
         {
             saveSlotButtons[i].onClick.RemoveAllListeners();
         }
@@ -54,13 +54,13 @@ public class SaveSlotsModal : Modal
 
     public void SetIsNewGame(bool isNewGame)
     {
-        this.isNewGame=isNewGame;
+        this.isNewGame = isNewGame;
     }
     
     void HandleSaveSlotsSelected(int index)
     {
         Events.SaveSlotClicked?.Invoke();
-        this.index=index;
+        this.index = index;
         /*if(isNewGame && !string.IsNullOrEmpty(saveSlots[index].username))
         {
             warningModal.ShowModal();
@@ -73,7 +73,7 @@ public class SaveSlotsModal : Modal
     void HandleOverwriteGameData()
     {
         SetSaveSlot();
-        SaveSlotSelected?.Invoke(isNewGame,index.ToString());
+        SaveSlotSelected?.Invoke(isNewGame, index.ToString());
     }
 
     void SetSaveSlot()
@@ -85,7 +85,7 @@ public class SaveSlotsModal : Modal
 
     void DisableEmptySaveSlots()
     {
-        /*for(int i=0;i<saveSlots.Count;i++)
+        /*for(int i=0; i<saveSlots.Count; i++)
         {
             if(string.IsNullOrEmpty(saveSlots[i].username))
             {
@@ -100,7 +100,7 @@ public class SaveSlotsModal : Modal
         text+=saveSlots[index].username+"\n";
         text+="<sup>";
         TimeSpan time=TimeSpan.FromSeconds(saveSlots[index].playTime);
-        text+="Time:"+new TimeSpan(time.Hours,time.Minutes,time.Seconds)+" | ";
+        text+="Time:" + new TimeSpan(time.Hours, time.Minutes, time.Seconds)+" | ";
         text+=GameManager.GetMoneyAsString()+ " | ";
         text+="Last Played: "+new DateTime(saveSlots[index].lastPlayed);
         text+="</sup>";

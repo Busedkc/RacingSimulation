@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    [SerializeField] AudioSource saveSlotSound=null;
+    [SerializeField] AudioSource saveSlotSound = null;
 
     public void PlaySaveSlotSound()
     {

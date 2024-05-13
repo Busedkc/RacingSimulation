@@ -11,7 +11,7 @@ public class StartMenuController : MonoBehaviour
 
     private void OnEnable()
     {
-        newGameButton.onClick.AddListener(HandleNewGameButtonclicked);
+        newGameButton.onClick.AddListener(HandleNewGameButtonClicked);
         loadGameButton.onClick.AddListener(HandleLoadGameButtonClicked);
         Events.UsernameSubmitted += HandleUsernameWasSubmitted;
         //saveSlotsModal.SaveSlotSelected += HandleSaveSlotWasSelected;
@@ -19,7 +19,7 @@ public class StartMenuController : MonoBehaviour
 
     private void OnDisable()
     {
-        newGameButton.onClick.RemoveListener(HandleNewGameButtonclicked);
+        newGameButton.onClick.RemoveListener(HandleNewGameButtonClicked);
         loadGameButton.onClick.RemoveListener(HandleLoadGameButtonClicked);
         Events.UsernameSubmitted -= HandleUsernameWasSubmitted;
         //saveSlotsModal.SaveSlotSelected -= HandleSaveSlotWasSelected;
@@ -27,10 +27,10 @@ public class StartMenuController : MonoBehaviour
 
     }
 
-    void HandleNewGameButtonclicked()
+    void HandleNewGameButtonClicked()
     {
         //saveSlotsModal.SetIsNewGame(true);
-        //ShowModal();
+        //saveSlotsModal.ShowModal();
     }
 
     void HandleLoadGameButtonClicked()
@@ -42,12 +42,13 @@ public class StartMenuController : MonoBehaviour
     void HandleUsernameWasSubmitted(string username)
     {
         Dictionary<string, string> sceneData = new Dictionary<string, string>();
+        sceneData.Add("username",username);
         NavigationManager.LoadScene(Scenes.CHOOSE_A_CAR, sceneData);
     }
 
     void HandleSaveSlotWasSelected(bool isNewGame, string index)
     {
-        if (isNewGame)
+        if(isNewGame)
         {
             //enterUsernameModal.ShowModal();
             //enterUsernameModal.Init(enterUsernameModal.HideModal);

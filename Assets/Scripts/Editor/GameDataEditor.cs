@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [CustomEditor(typeof(GameData))]
-public class GameData : Editor
+public class GameDataEditor : Editor
 {
     public override void OnInspectorGUI()
     {

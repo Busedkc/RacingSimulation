@@ -14,7 +14,7 @@ public class PlaceText : FormattedText
     protected override void FormatText()
     {
         string placeText = "";
-        switch (value)
+        switch(value)
         {
             case 1:
                 placeText += "1<sup>st</sup>";

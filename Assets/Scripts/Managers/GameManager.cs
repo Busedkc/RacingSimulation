@@ -5,9 +5,9 @@ using UnityEditor;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] List<GameData> saveSlots=null;
-    [SerializeField] Material defaultMaterial=null;
-    [SerializeField] AudioManager audioManager=null;
+    [SerializeField] List<GameData> saveSlots = null;
+    [SerializeField] Material defaultMaterial = null;
+    [SerializeField] AudioManager audioManager = null;
     public static GameData gameData;
 
     private void OnDestroy()
@@ -42,7 +42,8 @@ public class GameManager : Singleton<GameManager>
         return gameData.currentActiveCar;
     }
 
-    public static List<bool> GetCarStates(){
+    public static List<bool> GetCarStates()
+    {
         return gameData.unlockedCars;
     }
 
@@ -110,7 +111,7 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleCarColorSet(Color color, float metallic, float smoothness)
     {
-        gameData.carColors[GetCurrentActiveCarIndex()]=color;
+        gameData.carColors[GetCurrentActiveCarIndex()] = color;
         gameData.metallic=metallic;
         gameData.smoothness=smoothness;
         SaveScriptableObject(gameData);

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Modal : MonoBehaviour
 {
-    [SerializeField] Button scrimButton=null;
+    [SerializeField] Button scrimButton = null;
 
     protected virtual void OnEnable()
     {
@@ -13,7 +13,8 @@ public class Modal : MonoBehaviour
         }
     }
 
-    protected virtual void OnDisable(){
+    protected virtual void OnDisable()
+    {
         if(scrimButton !=null)
         {
             scrimButton.onClick.RemoveListener(HideModal);
