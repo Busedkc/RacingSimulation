@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3966176076753403209
 Transform:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8124042792018582135
 Transform:
   m_ObjectHideFlags: 0
@@ -544,9 +544,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2583732712050813328}
-  - component: {fileID: 2583732712045917622}
-  - component: {fileID: 2583732712060822100}
-  - component: {fileID: 2583732712060785898}
   m_Layer: 1
   m_Name: RallyCar
   m_TagString: Untagged
@@ -574,147 +571,6 @@ Transform:
   - {fileID: 2583732712050787700}
   m_Father: {fileID: 951730835315771991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2583732712045917622
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583732712051092220}
-  serializedVersion: 4
-  m_Mass: 2000
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 2
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2583732712060822100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583732712051092220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00030e199cdd9934dbd15380a1bcabab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlMode: 1
-  activeControl: 1
-  carWheels:
-    wheels:
-      frontWheelDrive: 1
-      frontRight: {fileID: 2583732712050914356}
-      frontLeft: {fileID: 2583732712050866818}
-      backWheelDrive: 1
-      backRight: {fileID: 2583732712050848934}
-      backLeft: {fileID: 2583732712050787700}
-    setting:
-      Radius: 0.45
-      Weight: 1000
-      Distance: 0.2
-  carLights:
-    brakeLights:
-    - {fileID: 0}
-    - {fileID: 0}
-    reverseLights:
-    - {fileID: 0}
-    - {fileID: 0}
-  carSounds:
-    IdleEngine: {fileID: 0}
-    LowEngine: {fileID: 0}
-    HighEngine: {fileID: 0}
-    nitro: {fileID: 0}
-    switchGear: {fileID: 0}
-  carParticles:
-    brakeParticlePerfab: {fileID: 100000, guid: 7688b4d44a0c11a43b20da32baad8732, type: 3}
-    shiftParticle1: {fileID: 0}
-    shiftParticle2: {fileID: 0}
-  carSetting:
-    showNormalGizmos: 0
-    carSteer: {fileID: 2583732712050857960}
-    hitGround:
-    - tag: Street
-      grounded: 0
-      brakeSound: {fileID: 8300000, guid: 334cc9dcd313b2f48bda705e3eefc2df, type: 3}
-      groundSound: {fileID: 0}
-      brakeColor: {r: 0.6727941, g: 0.72763693, b: 0.75, a: 0.78431374}
-    - tag: Grass
-      grounded: 1
-      brakeSound: {fileID: 8300000, guid: 48557c3f3613c2e4babd9ef286d0b659, type: 3}
-      groundSound: {fileID: 8300000, guid: e74738166dc243747b9979b0cd3b6875, type: 3}
-      brakeColor: {r: 0.8088235, g: 0.6295862, b: 0.24383649, a: 0.78431374}
-    cameraSwitchView:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    springs: 25000
-    dampers: 1500
-    carPower: 120
-    shiftPower: 150
-    brakePower: 12000
-    shiftCentre: {x: 0, y: -0.05, z: 0}
-    maxSteerAngle: 30
-    shiftDownRPM: 2000
-    shiftUpRPM: 4000
-    idleRPM: 700
-    stiffness: 3
-    automaticGear: 1
-    gears:
-    - -9
-    - 9
-    - 4
-    - 3
-    - 2
-    - 1
-    LimitBackwardSpeed: 60
-    LimitForwardSpeed: 220
-  brake: 0
-  curTorque: 100
-  powerShift: 100
-  shift: 0
-  speed: 0
-  currentGear: 0
-  NeutralGear: 1
-  motorRPM: 0
-  Backward: 0
-  accelFwd: 0
-  accelBack: 0
-  steerAmount: 0
---- !u!114 &2583732712060785898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583732712051092220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05fa078d2d0ce344ab4de361da32ebfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxMoveDelta: 0.24
-  maxCollisionStrength: 30
-  YforceDamp: 0.3
-  demolutionRange: 0.6
-  impactDirManipulator: 0.75
-  optionalMeshList:
-  - {fileID: 2583732712052141156}
-  crashSound: {fileID: 0}
 --- !u!1 &2583732712051108798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3504503868181808518
 Transform:
   m_ObjectHideFlags: 0
@@ -1563,7 +1419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7364951800876665547
 Transform:
   m_ObjectHideFlags: 0
@@ -1657,7 +1513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2513937883732022984
 Transform:
   m_ObjectHideFlags: 0
@@ -1842,7 +1698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.3754, y: 3.6462}
+  m_AnchoredPosition: {x: 4.3754272, y: 3.6462097}
   m_SizeDelta: {x: 96.7509, y: 7.2924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4705859368756268284
@@ -1861,7 +1717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5820385339051687856
 Transform:
   m_ObjectHideFlags: 0
@@ -1989,7 +1845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7127349509478446686
 Transform:
   m_ObjectHideFlags: 0
@@ -2118,7 +1974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4814808698289937930
 Transform:
   m_ObjectHideFlags: 0
@@ -6947,7 +6803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7163666945270899058
 Transform:
   m_ObjectHideFlags: 0
@@ -7204,7 +7060,6 @@ GameObject:
   - component: {fileID: 951730835315771991}
   - component: {fileID: 8852998034954684684}
   - component: {fileID: 1906272744691206941}
-  - component: {fileID: 4307094372939451678}
   - component: {fileID: 1795240858487166703}
   m_Layer: 1
   m_Name: Car3
@@ -7281,33 +7136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carName: Luxury Car
   carPrice: 50000
---- !u!54 &4307094372939451678
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5411393712459405321}
-  serializedVersion: 4
-  m_Mass: 1500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1795240858487166703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7323,7 +7151,7 @@ MonoBehaviour:
   carModel: {fileID: 1906272744691206941}
   carView: {fileID: 8852998034954684684}
   car: {fileID: 5411393712459405321}
-  rigidbody: {fileID: 4307094372939451678}
+  rigidbody: {fileID: 0}
   isAIControlledCar: 0
   agent: {fileID: 0}
   pathFollower: {fileID: 0}
@@ -7611,7 +7439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6759850281203814284
 Transform:
   m_ObjectHideFlags: 0
@@ -7659,7 +7487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7167798651866811034
 Transform:
   m_ObjectHideFlags: 0
@@ -7920,7 +7748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8692510489660752687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8097,7 +7925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5267580409010849818
 Transform:
   m_ObjectHideFlags: 0
@@ -8189,7 +8017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400546042577002694
 Transform:
   m_ObjectHideFlags: 0
@@ -13039,7 +12867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.645813, y: -1.2917023}
+  m_AnchoredPosition: {x: 0.645813, y: -1.291687}
   m_SizeDelta: {x: -590.7083, y: -222.5834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &3124663437611414439
@@ -13079,7 +12907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1372200894867254005
 Transform:
   m_ObjectHideFlags: 0
