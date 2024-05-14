@@ -9,16 +9,16 @@ public class CarView : MonoBehaviour
 
     public void SetCarColorAndRims()
     {
-        //Material[] carBodyMaterials = GetCarBodyMaterials();
-        //foreach(Material material in carBodyMaterials)
-        //{
-        //material.color = GameManager.GetCarcolor();
-        //}
-        // if (GameManager.GetRimMaterial() != null)
-        //{
-        //    SetRimMaterial(GameManager.GetRimMaterial());
+        Material[] carBodyMaterials = GetCarBodyMaterials();
+        foreach(Material material in carBodyMaterials)
+        {
+        material.color = GameManager.GetCarColor();
+        }
+         if (GameManager.GetRimMaterial() != null)
+        {
+            SetRimMaterial(GameManager.GetRimMaterial());
 
-        //}
+        }
     }
 
     public void SetCarColor(Color color)

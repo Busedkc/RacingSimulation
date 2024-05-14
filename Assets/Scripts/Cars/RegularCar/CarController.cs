@@ -196,7 +196,7 @@ public class CarController : Car
     {
         return carView.GetCarBodyMaterials();
     }
-    public Material GetRimMaterials()
+    public Material GetRimMaterial()
     {
         return carView.GetRimMaterial();
     }

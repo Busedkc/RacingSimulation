@@ -23,7 +23,7 @@ public class ColorPickerModal : OneButtonModal
     protected override void OnEnable()
     {
         base.OnEnable();
-        //colorImageColor = GarageController.currentColor;
+        colorImageColor = GarageController.currentColor;
         float red = colorImageColor.r;
         float green = colorImageColor.g;
         float blue = colorImageColor.b;
@@ -80,46 +80,46 @@ public class ColorPickerModal : OneButtonModal
 
     void HandleRedSliderChange(float value)
     {
-        //Color temp = GarageController.currentColor;
-        //temp.r = value;
-        //GarageController.currentColor = temp;
-        //redText.SetValue(temp.r);
-        //colorImage.color = temp;
+        Color temp = GarageController.currentColor;
+        temp.r = value;
+        GarageController.currentColor = temp;
+        redText.SetValue(temp.r);
+        colorImage.color = temp;
     }
 
     void HandleGreenSliderChange(float value)
     {
-        //Color temp = GarageController.currentColor;
-        //temp.g = value;
-        //GarageController.currentColor = temp;
-        //greenText.SetValue(temp.g);
-        //colorImage.color = temp;
+        Color temp = GarageController.currentColor;
+        temp.g = value;
+        GarageController.currentColor = temp;
+        greenText.SetValue(temp.g);
+        colorImage.color = temp;
     }
 
     void HandleBlueSliderChange(float value)
     {
-        //Color temp = GarageController.currentColor;
-        //temp.b = value;
-        //GarageController.currentColor = temp;
-        //blueText.SetValue(temp.b);
-        //colorImage.color = temp;
+        Color temp = GarageController.currentColor;
+        temp.b = value;
+        GarageController.currentColor = temp;
+        blueText.SetValue(temp.b);
+        colorImage.color = temp;
     }
 
     void HandleChangeColorImage(float red, float green, float blue)
     {
-        //Color temp = GarageController.currentColor;
-        //temp.r = red;
-        //temp.g = green;
-        //temp.b = blue;
-        //float h;
-        //float s;
-        //float v;
-        //Color.RGBToHSV(colorImage.color, out h, out s, out v);
-        //float h2;
-        //float s2;
-        //float v2;
-        //Color.RGBToHSV(temp, out h2, out s2, out v2);
-        //GarageController.currentColor = Color.HSVToRGB(h, s, v2);
+        Color temp = GarageController.currentColor;
+        temp.r = red;
+        temp.g = green;
+        temp.b = blue;
+        float h;
+        float s;
+        float v;
+        Color.RGBToHSV(colorImage.color, out h, out s, out v);
+        float h2;
+        float s2;
+        float v2;
+        Color.RGBToHSV(temp, out h2, out s2, out v2);
+        GarageController.currentColor = Color.HSVToRGB(h, s, v2);
     }
 
 

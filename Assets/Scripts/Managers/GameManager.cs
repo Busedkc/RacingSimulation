@@ -10,9 +10,23 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] AudioManager audioManager = null;
     public static GameData gameData;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Start()
     {
         Events.CarColorChosen += HandleCarColorSet;
+        Events.RimColorChoosen += HandleRimColorSet;
+        Events.UsernameSubmitted += HandleUserNameSubmitted;
+        Events.CarChosen += HandleCarChoosen;
+        Events.BackButtonPressed += PlayBackButtonAudio;
+        Events.OkButtonClicked += PlayOkButtonAudio;
+        Events.CancelButtonClicked += PlayCancelButtonAudio;
+        Events.SaveSlotClicked += PlaySaveSlotSound;
+        Events.LeftOrRightButtonClicked += PlayLeftOrRightButtonAudio;
+        Events.PurchaseButtonClicked += PlayPurchaseAudio;
     }
 
     private void OnDestroy()
@@ -23,6 +37,15 @@ public class GameManager : Singleton<GameManager>
             SaveScriptableObject(gameData);
         }
         Events.CarColorChosen -= HandleCarColorSet;
+        Events.RimColorChoosen -= HandleRimColorSet;
+        Events.UsernameSubmitted -= HandleUserNameSubmitted;
+        Events.CarChosen -= HandleCarChoosen;
+        Events.BackButtonPressed -= PlayBackButtonAudio;
+        Events.OkButtonClicked -= PlayOkButtonAudio;
+        Events.CancelButtonClicked -= PlayCancelButtonAudio;
+        Events.SaveSlotClicked -= PlaySaveSlotSound;
+        Events.LeftOrRightButtonClicked -= PlayLeftOrRightButtonAudio;
+        Events.PurchaseButtonClicked -= PlayPurchaseAudio;
     }
 
     private void Update()
@@ -147,6 +170,30 @@ public class GameManager : Singleton<GameManager>
         audioManager.PlaySaveSlotSound();
     }
 
+    public void PlayBackButtonAudio()
+    {
+        audioManager.PlayBackButtonSound();
+    }
+
+    public void PlayOkButtonAudio()
+    {
+        audioManager.PlayOkButtonSound();
+    }
+
+    public void PlayCancelButtonAudio()
+    {
+        audioManager.PlayCancelButtonSound();
+    }
+
+    public void PlayLeftOrRightButtonAudio()
+    {
+        audioManager.PlayRightAndLeftButtonSound();
+    }
+
+    public void PlayPurchaseAudio()
+    {
+        audioManager.PlayChaChingButtonSound();
+    }
     private static void SaveScriptableObject(GameData gameData)
     {
         EditorUtility.SetDirty(gameData);

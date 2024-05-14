@@ -280,7 +280,7 @@ MonoBehaviour:
   - {fileID: 1143906476}
   leftButton: {fileID: 2146365224}
   rightButton: {fileID: 2003582127}
-  saveActiveCar: 0
+  saveActiveCar: 1
 --- !u!114 &666426426
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class StartMenuController : MonoBehaviour
         newGameButton.onClick.AddListener(HandleNewGameButtonClicked);
         loadGameButton.onClick.AddListener(HandleLoadGameButtonClicked);
         Events.UsernameSubmitted += HandleUsernameWasSubmitted;
-        //saveSlotsModal.SaveSlotSelected += HandleSaveSlotWasSelected;
+        saveSlotsModal.SaveSlotSelected += HandleSaveSlotWasSelected;
     }
 
     private void OnDisable()
@@ -22,27 +22,25 @@ public class StartMenuController : MonoBehaviour
         newGameButton.onClick.RemoveListener(HandleNewGameButtonClicked);
         loadGameButton.onClick.RemoveListener(HandleLoadGameButtonClicked);
         Events.UsernameSubmitted -= HandleUsernameWasSubmitted;
-        //saveSlotsModal.SaveSlotSelected -= HandleSaveSlotWasSelected;
-
-
+        saveSlotsModal.SaveSlotSelected -= HandleSaveSlotWasSelected;
     }
 
     void HandleNewGameButtonClicked()
     {
-        //saveSlotsModal.SetIsNewGame(true);
-        //saveSlotsModal.ShowModal();
+        saveSlotsModal.SetIsNewGame(true);
+        saveSlotsModal.ShowModal();
     }
 
     void HandleLoadGameButtonClicked()
     {
-        //saveSlotsModal.SetIsNewGame(false);
-        //saveSlotsModal.ShowModal();
+        saveSlotsModal.SetIsNewGame(false);
+        saveSlotsModal.ShowModal();
     }
 
     void HandleUsernameWasSubmitted(string username)
     {
         Dictionary<string, string> sceneData = new Dictionary<string, string>();
-        sceneData.Add("username",username);
+        sceneData.Add("username", username);
         NavigationManager.LoadScene(Scenes.CHOOSE_A_CAR, sceneData);
     }
 
@@ -50,8 +48,8 @@ public class StartMenuController : MonoBehaviour
     {
         if(isNewGame)
         {
-            //enterUsernameModal.ShowModal();
-            //enterUsernameModal.Init(enterUsernameModal.HideModal);
+            enterUsernameModal.ShowModal();
+            enterUsernameModal.Init(enterUsernameModal.HideModal);
         } else
         {
             Dictionary<string, string> sceneData = new Dictionary<string, string>();

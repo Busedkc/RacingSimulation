@@ -8,7 +8,7 @@ public class UserDataPanel : MonoBehaviour
 
     private void Start()
     {
-        //username.SetText(GameManager.GetUsername());
-        //money.SetText(GameManager.GetMoneyAsString());
+        username.SetText(GameManager.GetUsername());
+        money.SetText(GameManager.GetMoneyAsString());
     }
 }

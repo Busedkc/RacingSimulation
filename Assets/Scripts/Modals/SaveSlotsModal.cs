@@ -19,17 +19,17 @@ public class SaveSlotsModal : Modal
     protected override void OnEnable()
     {
         base.OnEnable();
-        //warningModal.Init(HandleOverwriteGameData,warningModal.HideModal);
-        //for(int i=0;i<saveSlotButtons.Count;i++)
-        //{
-        //    int index=i;
-        //    saveSlotButtons[i].onClick.AddListener(()=> {HandleSaveSlotsSelected(index);});
-        //    bool isSaveSlotEmpty=string.IsNullOrEmpty(saveSlots[i].username);
-        //    if(!isSaveSlotEmpty)
-        //    {
-        //        ShowSaveSlotInfo();
-        //    }
-        //} 
+        warningModal.Init(HandleOverwriteGameData,warningModal.HideModal);
+        for(int i=0;i<saveSlotButtons.Count;i++)
+        {
+            int index=i;
+            saveSlotButtons[i].onClick.AddListener(()=> {HandleSaveSlotsSelected(index);});
+            bool isSaveSlotEmpty=string.IsNullOrEmpty(saveSlots[i].username);
+            if(!isSaveSlotEmpty)
+            {
+                ShowSaveSlotInfo();
+            }
+        } 
         
         if(isNewGame)
         {
@@ -61,13 +61,13 @@ public class SaveSlotsModal : Modal
     {
         Events.SaveSlotClicked?.Invoke();
         this.index = index;
-        /*if(isNewGame && !string.IsNullOrEmpty(saveSlots[index].username))
+        if(isNewGame && !string.IsNullOrEmpty(saveSlots[index].username))
         {
             warningModal.ShowModal();
         } else
         {
             HandleOverwriteGameData();
-        }*/
+        }
     }
 
     void HandleOverwriteGameData()
@@ -78,25 +78,25 @@ public class SaveSlotsModal : Modal
 
     void SetSaveSlot()
     {
-        /*GameManager.gameData=saveSlots[index];
+        GameManager.gameData=saveSlots[index];
         warningModal.HideModal();
-        HideModal(); */
+        HideModal(); 
     }
 
     void DisableEmptySaveSlots()
     {
-        /*for(int i=0; i<saveSlots.Count; i++)
+        for(int i=0; i<saveSlots.Count; i++)
         {
             if(string.IsNullOrEmpty(saveSlots[i].username))
             {
                 saveSlotButtons[i].interactable=false;
             }
-        }*/
+        }
     }
 
     void ShowSaveSlotInfo()
     {
-        /*string text="";
+        string text="";
         text+=saveSlots[index].username+"\n";
         text+="<sup>";
         TimeSpan time=TimeSpan.FromSeconds(saveSlots[index].playTime);
@@ -104,6 +104,6 @@ public class SaveSlotsModal : Modal
         text+=GameManager.GetMoneyAsString()+ " | ";
         text+="Last Played: "+new DateTime(saveSlots[index].lastPlayed);
         text+="</sup>";
-        saveSlotTexts[index].SetText(text); */
+        saveSlotTexts[index].SetText(text);
     }
 }

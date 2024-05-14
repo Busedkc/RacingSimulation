@@ -4,5 +4,41 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 523697e84570f4460aa63b302611593d
+  - enabled: 1
+    path: Assets/Scenes/Main/Welcome.unity
+    guid: 407b37ddc73454a53916d16db5076efc
+  - enabled: 1
+    path: Assets/Scenes/Main/Main.unity
+    guid: 1de9b927bbf624497aa6bd2f5f89fb53
+  - enabled: 1
+    path: Assets/Scenes/Main/FTUE/ChooseACar.unity
+    guid: e0a4bd780edd64db5ad74d25f9c18436
+  - enabled: 1
+    path: Assets/Scenes/Main/Garage/Garage.unity
+    guid: a44466a2034fc44e79c6d7f1c0b2e189
+  - enabled: 1
+    path: Assets/Scenes/Main/HotPersuit/Arrested.unity
+    guid: 4708515ffc07a4a35bccd20a143f8ad3
+  - enabled: 1
+    path: Assets/Scenes/Main/HotPersuit/City.unity
+    guid: cdfc2e9d474f14651b947fb87c2330a3
+  - enabled: 1
+    path: Assets/Scenes/Main/Race/SelectATrack.unity
+    guid: 8c0b821e77a9e4872b7ad0b45310db86
+  - enabled: 1
+    path: Assets/Scenes/Main/Race/Tracks/Track1.unity
+    guid: 753503368db554c8e871b4e2b65108cf
+  - enabled: 1
+    path: Assets/Scenes/Main/Race/Tracks/Track2.unity
+    guid: 69cc0b53abd574f2ba2dfee76fc44d59
+  - enabled: 1
+    path: Assets/Scenes/Main/Race/Tracks/Track3.unity
+    guid: 2d954841c4e574dc09cc621e7ba30c67
+  - enabled: 1
+    path: Assets/Scenes/Main/Shop/Shop.unity
+    guid: ba0873846f76b47918fb1762b67fc08f
   m_configObjects: {}

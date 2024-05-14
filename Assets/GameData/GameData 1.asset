@@ -12,13 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef194a6b9b7804fc198098cc583188c8, type: 3}
   m_Name: GameData 1
   m_EditorClassIdentifier: 
-  username: 
-  carColors: []
+  username: sude
+  carColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   metallic: 0
   smoothness: 0
-  rimMaterials: []
-  playTime: 0
-  money: 0
-  lastPlayed: 0
+  rimMaterials:
+  - {fileID: 2100000, guid: 2a3828cb11ae347e2b17dc731308cfe9, type: 2}
+  - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
+  - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
+  playTime: 29.618917
+  money: 100000
+  lastPlayed: 638513214691599710
   unlockedCars: 
   currentActiveCar: 0
