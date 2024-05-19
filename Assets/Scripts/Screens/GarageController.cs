@@ -43,7 +43,7 @@ public class GarageController : MonoBehaviour
         }
         metallicSlider.onValueChanged.AddListener(HandleMetallicSliderValueChanged);
         smoothnessSlider.onValueChanged.AddListener(HandleSmoothnessSliderValueChanged);
-        for(int i = 0; i < rimCustomizationButtons.Count; i++)
+        for (int i = 0; i < rimCustomizationButtons.Count; i++)
         {
             int position = i;
             rimCustomizationButtons[position].onClick.AddListener(() =>
@@ -67,7 +67,7 @@ public class GarageController : MonoBehaviour
         colorPickerModal.ColorPickerModalClosed -= HandleColorPickerModalClosed;
         metallicSlider.onValueChanged.RemoveListener(HandleMetallicSliderValueChanged);
         smoothnessSlider.onValueChanged.RemoveListener(HandleSmoothnessSliderValueChanged);
-        for(int i = 0; i < rimCustomizationButtons.Count; i++)
+        for (int i = 0; i < rimCustomizationButtons.Count; i++)
         {
             rimCustomizationButtons[i].onClick.RemoveAllListeners();
         }
@@ -130,9 +130,10 @@ public class GarageController : MonoBehaviour
         hsvSliders[2].value = v;
     }
 
-    void HandleMetallicSliderValueChanged(float value){
+    void HandleMetallicSliderValueChanged(float value)
+    {
         carBodyMaterials = carCarousel.GetCurrentCar().GetCarBodyMaterials();
-        foreach(Material material in carBodyMaterials)
+        foreach (Material material in carBodyMaterials)
         {
             priorMetallic = material.GetFloat("_Metallic");
             material.SetFloat("_Metallic", value);
@@ -143,7 +144,7 @@ public class GarageController : MonoBehaviour
     void HandleSmoothnessSliderValueChanged(float value)
     {
         carBodyMaterials = carCarousel.GetCurrentCar().GetCarBodyMaterials();
-        foreach(Material material in carBodyMaterials)
+        foreach (Material material in carBodyMaterials)
         {
             priorSmoothness = material.GetFloat("_Glossiness");
             material.SetFloat("_Glossiness", value);
@@ -173,4 +174,3 @@ public class GarageController : MonoBehaviour
         SaveCarColor(priorColor, priorMetallic, priorSmoothness);
     }
 }
-
