@@ -22,9 +22,9 @@ MonoBehaviour:
   rimMaterials:
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
-  - {fileID: 2100000, guid: 2a3828cb11ae347e2b17dc731308cfe9, type: 2}
-  playTime: 234.44559
+  - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
+  playTime: 208.94373
   money: 100000
-  lastPlayed: 638517454903693950
+  lastPlayed: 638517464141045790
   unlockedCars: 
-  currentActiveCar: 2
+  currentActiveCar: 0
