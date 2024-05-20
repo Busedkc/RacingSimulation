@@ -87,7 +87,7 @@ public class ShopController : MonoBehaviour
             notEnoughMoneyModal.ShowModal();
         }
     }
-    void hideConfirmPurchaseModal()
+    void HideConfirmPurchaseModal()
     {
         confirmPurchaseModal.HideModal();
     }
