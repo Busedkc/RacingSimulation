@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PathNode : MonoBehaviour
+public class PathNode
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector3 a;
+    public Vector3 b;
 
-    // Update is called once per frame
-    void Update()
+    public PathNode() : this(Vector3.zero, Vector3.zero) { }
+    public PathNode(Vector3 a, Vector3 b)
     {
-        
+        this.a = a;
+        this.b = b;
     }
 }
