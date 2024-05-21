@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: 
   carColors:
-  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.60221696, g: 0.35723233, b: 0.35723233, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   metallic: 0
-  smoothness: 0
+  smoothness: 0.7871703
   rimMaterials:
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
-  playTime: 15.853035
+  playTime: 95.66435
   money: 100000
-  lastPlayed: 638518336238169880
+  lastPlayed: 638518421297512960
   unlockedCars: 
   currentActiveCar: 0
