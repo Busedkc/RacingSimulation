@@ -1,18 +1,74 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class IntroDequence : MonoBehaviour
+public class IntroSequence : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Image introImage = null;
+    [SerializeField] List<Camera> regularRaceCameras = null;
+    [SerializeField] Animator pulseAnimator = null;
+    [SerializeField] AudioSource introMusic = null;
+    [SerializeField] Camera introCamera = null;
+    [SerializeField] GameObject rotationObject = null;
+    [SerializeField] float introCameraMoveSpeed;
+    [SerializeField] AudioSource engineRevvingSound = null;
+    [SerializeField] GameObject regularRacingHUD = null;
+    [SerializeField] GameObject countdownObject = null;
+    [SerializeField] GameObject startRaceObject = null;
+    [SerializeField] AudioSource startAudio = null;
+
+    private void Start()
     {
-        
+        foreach(Camera raceCamera in regularRaceCameras)
+        {
+            raceCamera.gameObject.SetActive(false);
+        }
+        InvokeRepeating("ChangeIntroImageToRandomColor", 0f, 0.2f);
+        Invoke("HideIntroImage", 1.5f);
+        InvokeRepeating("MoveIntroCameraForward", 1.5f, 0.01f);
+        Invoke("SwitchToRaceCamera", 7.0f);
+        Invoke("StartRace", 13.5f);
+        Invoke("HideStartMessage", 14.5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SwitchToRaceCamera()
     {
-        
+        regularRaceCameras[GameManager.GetCurrentActiveCarIndex()].gameObject.SetActive(true);
+        introCamera.gameObject.SetActive(false);
+        introMusic.Stop();
+        regularRacingHUD.SetActive(true);
+        engineRevvingSound.Play();
+        pulseAnimator.enabled = false;
+        countdownObject.SetActive(true);
+    }
+
+    void StartRace()
+    {
+        countdownObject.SetActive(true);
+        startRaceObject.SetActive(true);
+        startAudio.Play();
+    }
+
+    void HideStartMessage()
+    {
+        startRaceObject.SetActive(false);
+        CarFactory.EnableAICars();
+        Events.RaceStarted?.Invoke();
+    }
+
+    void ChangeIntroImageToRandomColor()
+    {
+        Color randomColor = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
+        introImage.color = randomColor;
+    }
+
+    void IntroImage()
+    {
+        introImage.gameObject.SetActive(false);
+    }
+
+    void MoveIntroCameraForward()
+    {
+        introCamera.gameObject.transform.position -= rotationObject.transform.forward * Time.deltaTime * introCameraMoveSpeed;
     }
 }

@@ -40,7 +40,7 @@ public class CarFactory : MonoBehaviour
         SelfDrivingCar pf = car.GetComponent<SelfDrivingCar>();
         pf.path = index <= 2 ? paths[0] : paths[1];
         carController.gameObject.transform.rotation = carStartingDirectionObject.transform.rotation;
-        carController.ToggleHeadlightFlares(showHeadlights);
+        carController.ToogleHeadLightFlares(showHeadlights);
         cars.Add(carController);
         return car;
     }
@@ -49,7 +49,7 @@ public class CarFactory : MonoBehaviour
     {
         foreach (CarController car in cars)
         {
-            car.EnableAICars();
+            car.EnableAICar();
         }
     }
 }
