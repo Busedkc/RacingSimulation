@@ -45,7 +45,7 @@ public class IntroSequence : MonoBehaviour
 
     void StartRace()
     {
-        countdownObject.SetActive(true);
+        countdownObject.SetActive(false);
         startRaceObject.SetActive(true);
         startAudio.Play();
     }
@@ -63,7 +63,7 @@ public class IntroSequence : MonoBehaviour
         introImage.color = randomColor;
     }
 
-    void IntroImage()
+    void HideIntroImage()
     {
         introImage.gameObject.SetActive(false);
     }
