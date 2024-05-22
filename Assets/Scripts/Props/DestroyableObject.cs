@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Rigidbody rigidbody = null;
+    [SerializeField] AudioSource hitSound = null;
+    bool audioPlayed;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if(collision.gameObject.tag.Equals("Player"))
+        {
+            rigidbody.constraints = RigidbodyConstraints.None;
+            if(hitSound != null & !audioPlayed)
+            {
+                audioPlayed = true;
+                hitSound.Play();
+            }
+        }
     }
 }
