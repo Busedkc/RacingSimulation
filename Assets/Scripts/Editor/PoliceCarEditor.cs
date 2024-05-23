@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
-public class PoliceCarEditor : MonoBehaviour
+[CustomEditor(typeof(PoliceCarController))]
+[ExecuteInEditMode]
+public class PoliceCarEditor : Editor
 {
-    // Start is called before the first frame update
-    void Start()
+    SerializedProperty boxCollider;
+    SerializedProperty range;
+
+    private void OnEnable()
     {
-        
+        boxCollider = serializedObject.FindProperty("boxCollider");
+        range = serializedObject.FindProperty("range");
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnInspectorGUI()
     {
-        
+        DrawDefaultInspector();
+        PoliceCarController myScript = (PoliceCarController)target;
+        myScript.ScaleCollider();
     }
+
 }
