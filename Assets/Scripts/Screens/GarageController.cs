@@ -32,16 +32,16 @@ public class GarageController : MonoBehaviour
         {
             int position = i;
             hsvSliders[position].onValueChanged.AddListener((value) => { HandleHSVSliderValueChanged(position, value); });
-            colorPickerButton.onClick.AddListener(colorPickerModal.ShowModal);
-            priorColor = GameManager.GetCarColor();
-            float h, s, v;
-            Color.RGBToHSV(priorColor, out h, out s, out v);
-            hsvSliders[0].value = h;
-            hsvSliders[1].value = s;
-            hsvSliders[2].value = v;
-            colorPickerButton.image.color = GameManager.GetCarColor();
-            colorPickerModal.ColorPickerModalClosed += HandleColorPickerModalClosed;
+            colorPickerButton.onClick.AddListener(colorPickerModal.ShowModal); 
         }
+        priorColor = GameManager.GetCarColor();
+        float h, s, v;
+        Color.RGBToHSV(priorColor, out h, out s, out v);
+        hsvSliders[0].value = h;
+        hsvSliders[1].value = s;
+        hsvSliders[2].value = v;
+        colorPickerButton.image.color = GameManager.GetCarColor();
+        colorPickerModal.ColorPickerModalClosed += HandleColorPickerModalClosed;
         metallicSlider.onValueChanged.AddListener(HandleMetallicSliderValueChanged);
         smoothnessSlider.onValueChanged.AddListener(HandleSmoothnessSliderValueChanged);
         for (int i = 0; i < rimCustomizationButtons.Count; i++)

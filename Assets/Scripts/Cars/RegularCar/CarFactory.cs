@@ -26,7 +26,7 @@ public class CarFactory : MonoBehaviour
 
     public GameObject SpawnRandomCar(Transform spawnPoint, int index)
     {
-        int randomBodyIndex = Random.Range(0, carMeshes.Count - 1);
+        int randomBodyIndex = Random.Range(0, carMeshes.Count);
         GameObject car = Instantiate(carMeshes[randomBodyIndex], spawnPoint);
         car.transform.parent = null;
         CarController carController = car.GetComponent<CarController>();
@@ -34,7 +34,7 @@ public class CarFactory : MonoBehaviour
         counter++;
         Color randomBodyColor = Random.ColorHSV();
         carController.SetCarColor(randomBodyColor);
-        int randomRimIndex = Random.Range(0, rimMaterials.Count - 1);
+        int randomRimIndex = Random.Range(0, rimMaterials.Count);
         Material rimMaterial = rimMaterials[randomRimIndex];
         carController.SetRimMaterial(rimMaterial);
         SelfDrivingCar pf = car.GetComponent<SelfDrivingCar>();
