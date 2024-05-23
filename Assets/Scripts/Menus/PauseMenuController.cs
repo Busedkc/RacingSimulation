@@ -8,9 +8,11 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] Button resumeButton = null;
      [SerializeField] Button restartButton = null;
      [SerializeField] Button quitButton = null;
+     Dictionary<string, string> sceneData; 
      private void Awake()
      {
             Time.timeScale = 0;
+            sceneData = new Dictionary<string, string>();
      }
 
      private void Start()
@@ -37,16 +39,17 @@ public class PauseMenuController : MonoBehaviour
     void HandleRestartButtonClicked()
     {
         int currentTrack = int.Parse(NavigationManager.SceneData["track"]);
+        sceneData.Add("track", currentTrack.ToString());
         switch(currentTrack)
         {
             case 1:
-                NavigationManager.LoadScene(Scenes.TRACK1);
+                NavigationManager.LoadScene(Scenes.TRACK1, sceneData);
                 break;
             case 2:
-                NavigationManager.LoadScene(Scenes.TRACK2);
+                NavigationManager.LoadScene(Scenes.TRACK2, sceneData);
                 break;
             case 3:
-                NavigationManager.LoadScene(Scenes.TRACK3);
+                NavigationManager.LoadScene(Scenes.TRACK3, sceneData);
                 break;        
 
         }

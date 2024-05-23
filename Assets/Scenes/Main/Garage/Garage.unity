@@ -2216,6 +2216,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3633793936715285308, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667916198782931226, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5671273831610870032, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_Name
       value: Cars
@@ -2224,9 +2232,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7033795443933564378, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7281240979432759489, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306495834220185153, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: rigidbody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8807752950393287765, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2268,44 +2284,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 2813658644785738514, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: 5064797716628250032, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: 1282166720649054955, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 7862102535554029843, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: -8244881371495580787, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: -3526997360843031997, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: 4644675516519232733, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: 1727093763360056198, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+    - {fileID: 4683719192584431355, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
---- !u!114 &451980078 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3962307795701902887, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
-  m_PrefabInstance: {fileID: 451980077}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045796ac9961d4a5e9c4a2da68a4c188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &451980079 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6253455796055809835, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
-  m_PrefabInstance: {fileID: 451980077}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045796ac9961d4a5e9c4a2da68a4c188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &451980080 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3547650345149088148, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
-  m_PrefabInstance: {fileID: 451980077}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045796ac9961d4a5e9c4a2da68a4c188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &486156386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,9 +4612,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars:
-  - {fileID: 451980080}
-  - {fileID: 451980079}
-  - {fileID: 451980078}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   leftButton: {fileID: 1230158138}
   rightButton: {fileID: 1314277879}
   saveActiveCar: 1

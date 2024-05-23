@@ -42,7 +42,7 @@ public class RaceController : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) && raceStarted)
         {
             pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
         }

@@ -19,6 +19,7 @@ public class IntroSequence : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         foreach(Camera raceCamera in regularRaceCameras)
         {
             raceCamera.gameObject.SetActive(false);

@@ -27,6 +27,7 @@ public class GarageController : MonoBehaviour
     private void OnEnable()
     {
         carCarousel.ShowCarAtIndex(GameManager.GetCurrentActiveCarIndex(), true);
+        SetUpCarsPlayerHasList();
         for (int i = 0; i < hsvSliders.Count; i++)
         {
             int position = i;
@@ -84,6 +85,19 @@ public class GarageController : MonoBehaviour
             foreach (Material material in carBodyMaterials)
             {
                 material.color = currentColor;
+            }
+        }
+    }
+
+    void SetUpCarsPlayerHasList()
+    {
+        List<bool> carStates = GameManager.GetCarStates();
+        for(int i = 0; i < carStates.Count; i++)
+        {
+            bool doesPlayerHaveCar = carStates[i];
+            if(!doesPlayerHaveCar)
+            {
+                carCarousel.RemoveCarAtIndex(i);
             }
         }
     }

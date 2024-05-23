@@ -135,6 +135,13 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleCarChoosen(int car)
     {
+        gameData.currentActiveCar = car;
+        gameData.unlockedCars = new List<bool>();
+        for(int i = 0; i < 3; i++ )
+        {
+            gameData.unlockedCars.Add(false);
+        }
+        UnlockCar(GetCurrentActiveCarIndex());
         SaveScriptableObject(gameData);
     }
 
