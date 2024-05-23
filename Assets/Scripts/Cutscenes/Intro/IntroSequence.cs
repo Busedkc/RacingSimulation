@@ -33,8 +33,7 @@ public class IntroSequence : MonoBehaviour
 
     void SwitchToRaceCamera()
     {
-        //regularRaceCameras[GameManager.GetCurrentActiveCarIndex()].gameObject.SetActive(true);
-        regularRaceCameras[0].gameObject.SetActive(true);
+        regularRaceCameras[GameManager.GetCurrentActiveCarIndex()].gameObject.SetActive(true);
         introCamera.gameObject.SetActive(false);
         introMusic.Stop();
         regularRacingHUD.SetActive(true);
