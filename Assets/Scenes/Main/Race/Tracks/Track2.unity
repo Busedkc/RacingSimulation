@@ -882,9 +882,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 178562861}
+  - {fileID: 178562860}
+  - {fileID: 178562856}
   speedometerNeedle: {fileID: 870799696}
 --- !u!4 &143271377
 Transform:

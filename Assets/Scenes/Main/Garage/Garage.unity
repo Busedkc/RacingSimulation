@@ -2224,6 +2224,10 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3933112359959726247, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5671273831610870032, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_Name
       value: Cars

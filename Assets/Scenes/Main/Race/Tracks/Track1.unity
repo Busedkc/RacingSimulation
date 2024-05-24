@@ -9719,6 +9719,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827080184672734626, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827080184672734626, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827080184672734626, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860089775397756804, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860089775397756804, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860089775397756804, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.34
+      objectReference: {fileID: 0}
     - target: {fileID: 2928856823771054188, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -9741,11 +9765,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6996295553144479740, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7033795443933564378, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122561978443864825, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122561978443864825, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122561978443864825, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 8807752950393287765, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9753,7 +9789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807752950393287765, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8807752950393287765, guid: 6d2c68bc746464e0bbf7217083b6f461, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21094,9 +21130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1277193987}
+  - {fileID: 1277193986}
+  - {fileID: 1277193985}
   speedometerNeedle: {fileID: 2056039081}
 --- !u!4 &1702459715
 Transform:
