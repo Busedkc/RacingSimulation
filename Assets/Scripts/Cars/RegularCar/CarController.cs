@@ -97,7 +97,7 @@ public class CarController : Car
         }
         foreach (GameObject bodyGameObject in bodyGameObjects)
         {
-            bodyGameObject.SetActive(!interiorView.activeInHierarchy);
+           // bodyGameObject.SetActive(!interiorView.activeInHierarchy);
         }
         bodyCollider.enabled = !interiorView.activeInHierarchy;
         rearViewMirrorCamera.SetActive(interiorView.activeInHierarchy);

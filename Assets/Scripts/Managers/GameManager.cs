@@ -169,6 +169,8 @@ public class GameManager : Singleton<GameManager>
         gameData.lastPlayed=DateTime.Now.Ticks;
         gameData.unlockedCars= new List<bool>();
         gameData.currentActiveCar=0;
+        gameData.metallic = 0f;
+        gameData.smoothness = 0f;
         SaveScriptableObject(gameData);
     }
 

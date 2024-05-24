@@ -12,7 +12,7 @@ public class FinishedRaceModal : OneButtonModal
 
     public void UpdateFinalLeaderboard(List<CarController> listOfCarsInRace)
     {
-        //finishedRaceModalLeaderboard.UpdateLeaderboard(listOfCarsInRace);
+        finishedRaceModalLeaderboard.UpdateLeaderboard(listOfCarsInRace);
     }
 
      public void ShowFirstPlaceCelebration(bool shouldShow)

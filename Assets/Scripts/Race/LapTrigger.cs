@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LapTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   [SerializeField] int maxLaps = 0;
+   int currentLapsCompleted;
 
-    // Update is called once per frame
-    void Update()
+   private void OnTriggerEnter(Collider other)
+   {
+    if(other.gameObject.tag.Equals("Player"))
     {
-        
+        currentLapsCompleted++;
+        if(currentLapsCompleted <= maxLaps)
+        {
+            Events.LapCompleted?.Invoke(currentLapsCompleted);
+        } else
+        {
+            Events.RaceCompleted?.Invoke();
+        }
     }
+   }
 }

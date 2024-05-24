@@ -1,18 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HotPersuitController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] List<CarController> playerCarList = null;
+    CarController playerCar;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        playerCar = playerCarList[GameManager.GetCurrentActiveCarIndex()];
+        playerCar.DisplayCar(true, true, true);
     }
 }

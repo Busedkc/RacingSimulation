@@ -38,6 +38,11 @@ public class PoliceCarController : Car
     public override void Update()
     {
         base.Update();
+
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         if (!isStatic)
         {
             gameObject.transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));

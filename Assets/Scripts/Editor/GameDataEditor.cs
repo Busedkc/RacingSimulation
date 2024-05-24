@@ -19,6 +19,8 @@ public class GameDataEditor : Editor
             gameDataScript.carColors=new List<Color>() {Color.white, Color.white, Color.white};
             gameDataScript.rimMaterials=new List<Material>();
             gameDataScript.unlockedCars=new List<bool>();
+            gameDataScript.metallic = 0f;
+            gameDataScript.smoothness = 0f;
         }
     }
 }

@@ -13,8 +13,8 @@ public class SelfDrivingCar : Seek
         base.Awake();
         target = new GameObject();
         currentParam = 0f;
-        float minPathOffset = 0.5f;
-        float maxPathOffset = 3.5f;
+        float minPathOffset = 0f;
+        float maxPathOffset = 0.5f;
         pathOffset = Random.Range(minPathOffset, maxPathOffset);
         transform.parent = null;
     }
