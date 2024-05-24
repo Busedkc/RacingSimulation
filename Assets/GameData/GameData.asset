@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef194a6b9b7804fc198098cc583188c8, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  username: 
+  username: gozdey
   carColors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -23,8 +23,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
-  playTime: 17.188538
+  playTime: 605.4106
   money: 100000
-  lastPlayed: 638521662465876280
+  lastPlayed: 638521694587286872
   unlockedCars: 010000
   currentActiveCar: 0
