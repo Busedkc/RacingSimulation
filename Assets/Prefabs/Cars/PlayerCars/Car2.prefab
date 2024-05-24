@@ -6897,7 +6897,6 @@ GameObject:
   - component: {fileID: 951730835315771991}
   - component: {fileID: 8852998034954684684}
   - component: {fileID: 1906272744691206941}
-  - component: {fileID: 4307094372939451678}
   - component: {fileID: 1795240858487166703}
   m_Layer: 1
   m_Name: Car2
@@ -6974,33 +6973,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carName: Sports Car
   carPrice: 30000
---- !u!54 &4307094372939451678
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5411393712459405321}
-  serializedVersion: 4
-  m_Mass: 1500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1795240858487166703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7016,7 +6988,7 @@ MonoBehaviour:
   carModel: {fileID: 1906272744691206941}
   carView: {fileID: 8852998034954684684}
   car: {fileID: 5411393712459405321}
-  rigidbody: {fileID: 4307094372939451678}
+  rigidbody: {fileID: 0}
   isAIControlledCar: 0
   agent: {fileID: 0}
   pathFollower: {fileID: 0}

@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868144405492906331, guid: 89d2b480758bd497796915f8f7c56675, type: 3}
       propertyPath: m_text
-      value: Select a car
+      value: Choose a car!
       objectReference: {fileID: 0}
     - target: {fileID: 5868144405492906331, guid: 89d2b480758bd497796915f8f7c56675, type: 3}
       propertyPath: m_fontSize

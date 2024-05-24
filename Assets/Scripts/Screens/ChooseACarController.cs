@@ -10,7 +10,7 @@ public class ChooseACarController : MonoBehaviour
 
     private void Awake()
     {
-        chooseACarText.SetText("Choose a car," + NavigationManager.SceneData["username"] + "!");
+        chooseACarText.SetText("Choose a car" + NavigationManager.SceneData["username"] + "!");
     }
 
     private void OnEnable()

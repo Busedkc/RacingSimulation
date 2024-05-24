@@ -14,15 +14,14 @@ public class GarageController : MonoBehaviour
     [SerializeField] List<Material> rimCustomizationMaterials = null;
     [SerializeField] Button saveButton = null;
     [SerializeField] Button resetButton = null;
+    Material[] carBodyMaterials;
+    Material priorRimMaterial;
     Color priorColor;
     public static Color currentColor = Color.white;
     float priorMetallic;
     float currentMetallic;
     float priorSmoothness;
     float currentSmoothness;
-
-    Material[] carBodyMaterials;
-    Material priorRimMaterial;
 
     private void OnEnable()
     {
@@ -125,16 +124,6 @@ public class GarageController : MonoBehaviour
         }
     }
 
-    void SaveCarColor(Color color, float metallic, float smoothness)
-    {
-        foreach (Material material in carBodyMaterials)
-        {
-            material.color = color;
-            Events.CarColorChosen?.Invoke(color, metallic, smoothness);
-            colorPickerButton.image.color = color;
-        }
-    }
-
     private void HandleColorPickerModalClosed()
     {
         float h, s, v;
@@ -186,5 +175,15 @@ public class GarageController : MonoBehaviour
         HandleMetallicSliderValueChanged(priorMetallic);
         HandleSmoothnessSliderValueChanged(priorSmoothness);
         SaveCarColor(priorColor, priorMetallic, priorSmoothness);
+    }
+
+     void SaveCarColor(Color color, float metallic, float smoothness)
+    {
+        foreach (Material material in carBodyMaterials)
+        {
+            material.color = color;
+            Events.CarColorChosen?.Invoke(color, metallic, smoothness);
+            colorPickerButton.image.color = color;
+        }
     }
 }

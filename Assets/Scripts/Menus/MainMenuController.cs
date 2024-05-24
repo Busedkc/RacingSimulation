@@ -14,7 +14,7 @@ public class MainMenuController : MonoBehaviour
     {
         foreach(CarController car in carList)
         {
-            car.DisplayCar(true);
+            car.DisplayCar(false);
         }
         CarController activeCar = carList[GameManager.GetCurrentActiveCarIndex()];
         activeCar.SetColorAndRims();
