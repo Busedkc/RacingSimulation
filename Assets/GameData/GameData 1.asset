@@ -23,8 +23,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
-  playTime: 4.873907
+  playTime: 11.234579
   money: 100000
-  lastPlayed: 638520990187159950
-  unlockedCars: 010000
-  currentActiveCar: 0
+  lastPlayed: 638522717145341970
+  unlockedCars: 
+  currentActiveCar: 1

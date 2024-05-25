@@ -9,6 +9,7 @@ public class PauseMenuController : MonoBehaviour
      [SerializeField] Button restartButton = null;
      [SerializeField] Button quitButton = null;
      Dictionary<string, string> sceneData; 
+     
      private void Awake()
      {
             Time.timeScale = 0;
