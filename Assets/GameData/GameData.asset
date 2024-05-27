@@ -20,11 +20,11 @@ MonoBehaviour:
   metallic: 0
   smoothness: 0
   rimMaterials:
-  - {fileID: 0}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
   - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
-  playTime: 23.5132
+  - {fileID: 2100000, guid: 901dcd96d33da4667a74d126cf5ea0de, type: 2}
+  playTime: 4.8886046
   money: 100000
-  lastPlayed: 638522717875291420
-  unlockedCars: 010000
-  currentActiveCar: 0
+  lastPlayed: 638524181131567840
+  unlockedCars: 000001
+  currentActiveCar: 2
