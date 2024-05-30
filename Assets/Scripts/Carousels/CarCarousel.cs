@@ -33,7 +33,7 @@ public class CarCarousel : MonoBehaviour, ICarousel
         goingRight = true;
         index = index < cars.Count - 1 ? index + 1 : 0;
         ShowCarAtIndex(index);
-        if (saveActiveCar)
+        if(saveActiveCar)
         {
             GameManager.SetActiveCar(index);
         }
@@ -46,7 +46,7 @@ public class CarCarousel : MonoBehaviour, ICarousel
         goingRight = false;
         index = index > 0 ? index - 1 : cars.Count - 1;
         ShowCarAtIndex(index);
-        if (saveActiveCar)
+        if(saveActiveCar)
         {
             GameManager.SetActiveCar(index);
         }

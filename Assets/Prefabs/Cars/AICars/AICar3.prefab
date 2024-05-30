@@ -1001,7 +1001,7 @@ MonoBehaviour:
   carModel: {fileID: 7584161263301680801}
   carView: {fileID: 964181590445517095}
   car: {fileID: 7068585256901332545}
-  rigidbody: {fileID: 0}
+  rigidbody: {fileID: -588468565815025267}
   isAIControlledCar: 1
   agent: {fileID: 8118563360957469242}
   pathFollower: {fileID: -6597278480401588016}
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7068585256901332545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2760e42be1af4b2d9dc135119e74c5a, type: 3}
   m_Name: 

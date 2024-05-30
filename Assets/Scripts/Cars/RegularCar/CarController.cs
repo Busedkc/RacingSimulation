@@ -56,7 +56,7 @@ public class CarController : Car
         Events.RaceStarted += HandleRaceStarted;
         if (!isAIControlledCar)
         {
-            //carModel.SetCarLabel(GameManager.GetUsername());
+            carModel.SetCarLabel(GameManager.GetUsername());
         }
         if (nitrous1 != null)
         {
@@ -76,7 +76,8 @@ public class CarController : Car
         {
             return;
         }
-        UnityEngine.Quaternion tempRotation = transform.rotation;
+        UnityEngine.
+        Quaternion tempRotation = transform.rotation;
         tempRotation.x = 0;
         tempRotation.z = 0;
         transform.rotation = tempRotation;
@@ -97,7 +98,7 @@ public class CarController : Car
         }
         foreach (GameObject bodyGameObject in bodyGameObjects)
         {
-           //bodyGameObject.SetActive(!interiorView.activeInHierarchy);
+            bodyGameObject.SetActive(!interiorView.activeInHierarchy);
         }
         bodyCollider.enabled = !interiorView.activeInHierarchy;
         rearViewMirrorCamera.SetActive(interiorView.activeInHierarchy);

@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
@@ -8,12 +8,12 @@ public class Car : MonoBehaviour
 
     public virtual void Start()
     {
-        Invoke("SetoriginalYPos", 1.5f);
+        Invoke("SetOriginalYPos", 1.5f);
     }
 
     public virtual void Update()
     {
-        if (hasOriginalYPosBeenSet)
+        if(hasOriginalYPosBeenSet)
         {
             Vector3 positionWithConstantYPos = new Vector3(transform.position.x,
                                                            originalYPos, transform.position.z);

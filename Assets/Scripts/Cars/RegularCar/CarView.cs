@@ -12,7 +12,7 @@ public class CarView : MonoBehaviour
         Material[] carBodyMaterials = GetCarBodyMaterials();
         foreach(Material material in carBodyMaterials)
         {
-        material.color = GameManager.GetCarColor();
+            material.color = GameManager.GetCarColor();
         }
          if (GameManager.GetRimMaterial() != null)
         {
