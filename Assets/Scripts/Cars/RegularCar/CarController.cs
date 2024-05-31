@@ -56,7 +56,7 @@ public class CarController : Car
         Events.RaceStarted += HandleRaceStarted;
         if (!isAIControlledCar)
         {
-            carModel.SetCarLabel(GameManager.GetUsername());
+            //carModel.SetCarLabel(GameManager.GetUsername());
         }
         if (nitrous1 != null)
         {
